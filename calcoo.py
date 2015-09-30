@@ -3,6 +3,7 @@
 
 import sys
 
+
 class Calculadora():
 
     def __init__(self, operando1, operando2):
@@ -14,7 +15,7 @@ class Calculadora():
 
     def resta(self):
         return self.operando1 - self.operando2
-    
+
 
 if __name__ == "__main__":
     try:
@@ -27,5 +28,4 @@ if __name__ == "__main__":
     elif sys.argv[2] == "resta":
         print(variable.resta())
     else:
-        sys.exit('Este programa solo admite "suma" o "resta" como segundo argumento')
-
+        sys.exit("Solo se admite suma o resta")
