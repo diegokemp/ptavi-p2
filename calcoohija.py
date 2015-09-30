@@ -16,11 +16,12 @@ class Calculadora():
     def resta(self):
         return self.operando1 - self.operando2
 
+
 class CalculadoraHija(Calculadora):
 
     def mult(self):
         return self.operando1 * self.operando2
-    
+
     def div(self):
         return self.operando1 / self.operando2
 
