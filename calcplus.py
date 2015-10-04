@@ -39,38 +39,37 @@ if __name__ == "__main__":
             acumulador = float(lista_palabras[1])
             y = 2
             while y < len(lista_palabras):
-                operandos = Calculadora(acumulador,float(lista_palabras[y]))
+                operandos = Calculadora(acumulador, float(lista_palabras[y]))
                 acumulador = operandos.suma()
                 y = y+1
             print(acumulador)
-        if lista_palabras[0] == "resta":
+        elif lista_palabras[0] == "resta":
             acumulador = float(lista_palabras[1])
             y = 2
             while y < len(lista_palabras):
-                operandos = Calculadora(acumulador,float(lista_palabras[y]))
+                operandos = Calculadora(acumulador, float(lista_palabras[y]))
                 acumulador = operandos.resta()
                 y = y+1
             print(acumulador)
-        if lista_palabras[0] == "multiplica":
+        elif lista_palabras[0] == "multiplica":
             acumulador = float(lista_palabras[1])
             y = 2
             while y < len(lista_palabras):
-                operandos = CalculadoraHija(acumulador,float(lista_palabras[y]))
+                operandos = CalculadoraHija(acumulador, float(lista_palabras[y]))
                 acumulador = operandos.mult()
                 y = y+1
             print(acumulador)
-        if lista_palabras[0] == "divide":
+        elif lista_palabras[0] == "divide":
             acumulador = float(lista_palabras[1])
             y = 2
             while y < len(lista_palabras):
-                operandos = CalculadoraHija(acumulador,float(lista_palabras[y]))
+                operandos = CalculadoraHija(acumulador, float(lista_palabras[y]))
                 try:
                     acumulador = operandos.div()
                 except ZeroDivisionError:
                     sys.exit("Error: Division by zero is not allowed")
                 y = y+1
-            print(acumulador)                                                                      
+            print(acumulador)
+        else:
+            sys.exit("solo se admite suma, resta, multiplica o divide")
         x = x+1
-    
-
-    
