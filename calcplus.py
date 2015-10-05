@@ -39,33 +39,33 @@ if __name__ == "__main__":
             acumulador = float(lista_palabras[1])
             y = 2
             while y < len(lista_palabras):
-                operandos = Calculadora(acumulador, float(lista_palabras[y]))
-                acumulador = operandos.suma()
+                operan = Calculadora(acumulador, float(lista_palabras[y]))
+                acumulador = operan.suma()
                 y = y+1
             print(acumulador)
         elif lista_palabras[0] == "resta":
             acumulador = float(lista_palabras[1])
             y = 2
             while y < len(lista_palabras):
-                operandos = Calculadora(acumulador, float(lista_palabras[y]))
-                acumulador = operandos.resta()
+                operan = Calculadora(acumulador, float(lista_palabras[y]))
+                acumulador = operan.resta()
                 y = y+1
             print(acumulador)
         elif lista_palabras[0] == "multiplica":
             acumulador = float(lista_palabras[1])
             y = 2
             while y < len(lista_palabras):
-                operandos = CalculadoraHija(acumulador, float(lista_palabras[y]))
-                acumulador = operandos.mult()
+                operan = CalculadoraHija(acumulador, float(lista_palabras[y]))
+                acumulador = operan.mult()
                 y = y+1
             print(acumulador)
         elif lista_palabras[0] == "divide":
             acumulador = float(lista_palabras[1])
             y = 2
             while y < len(lista_palabras):
-                operandos = CalculadoraHija(acumulador, float(lista_palabras[y]))
+                operan = CalculadoraHija(acumulador, float(lista_palabras[y]))
                 try:
-                    acumulador = operandos.div()
+                    acumulador = operan.div()
                 except ZeroDivisionError:
                     sys.exit("Error: Division by zero is not allowed")
                 y = y+1
